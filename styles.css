@@ -1,0 +1,309 @@
+:root {
+  --ink: #151512;
+  --paper: #f7f5ef;
+  --line: #d6d2ca;
+  --pad: clamp(30px, 4vw, 76px);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font:
+    400 12px/1.5 Arial,
+    Helvetica,
+    sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+@font-face {
+  font-family: "Moneta";
+  src: url("font/Moneta-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Moneta";
+  src: url("font/Moneta-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Moneta";
+  src: url("font/Moneta-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Moneta";
+  src: url("font/Moneta-Black.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+.announcement-bar {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #1f1f1d;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0 18px;
+}
+.coming-soon-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.coming-header {
+  height: 82px;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.logo {
+  font-family: "Moneta", Georgia, serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  text-align: center;
+}
+.coming-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
+  min-height: calc(100vh - 168px);
+}
+.coming-visual {
+  position: relative;
+  min-height: 680px;
+  background: #b8b4ac
+    url(sand.jpg)
+    center 28% / cover no-repeat;
+  overflow: hidden;
+}
+.coming-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 20, 18, 0.03),
+    rgba(20, 20, 18, 0.14)
+  );
+}
+.coming-index {
+  position: absolute;
+  left: var(--pad);
+  bottom: 28px;
+  color: #fff;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+}
+.coming-content {
+  padding: 72px clamp(44px, 6vw, 100px) 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.coming-copy {
+  max-width: 560px;
+  margin: auto 0;
+}
+.eyebrow {
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.coming-copy .eyebrow {
+  display: block;
+  margin-bottom: 24px;
+}
+.coming-copy h1 {
+  font-family: "Moneta", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(58px, 6.2vw, 106px);
+  line-height: 0.87;
+  letter-spacing: 0.025em;
+  margin: 0 0 34px;
+  text-transform: uppercase;
+}
+.coming-copy > p {
+  max-width: 430px;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #5f5c56;
+  margin: 0 0 46px;
+}
+.coming-form {
+  max-width: 460px;
+}
+.coming-form > label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.coming-form > div {
+  display: flex;
+  border-bottom: 1px solid #292824;
+}
+.coming-form input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 13px 0;
+  font-size: 11px;
+  outline: 0;
+}
+.coming-form input::placeholder {
+  color: #7a766f;
+}
+.coming-form button {
+  width: 44px;
+  border: 0;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.coming-form button:disabled {
+  opacity: 0.45;
+  cursor: wait;
+}
+.newsletter-status {
+  min-height: 18px;
+  margin: 10px 0 0;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  opacity: 0.72;
+}
+.newsletter-status.is-success {
+  margin-top: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.coming-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 50px;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #74716a;
+}
+.coming-footer {
+  min-height: 54px;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  font-size: 7px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.coming-footer nav {
+  display: flex;
+  gap: 22px;
+}
+@media (max-width: 800px) {
+  .announcement-bar {
+    height: 30px;
+    font-size: 8px;
+    letter-spacing: 0.13em;
+    padding: 0 12px;
+  }
+  .coming-header {
+    height: 70px;
+    padding: 0 22px;
+  }
+  .logo {
+    font-family: "Moneta", Georgia, serif;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: normal;
+  }
+  .coming-main {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+  .coming-visual {
+    min-height: 52vh;
+    order: 1;
+  }
+  .coming-index {
+    left: 22px;
+    bottom: 18px;
+  }
+  .coming-content {
+    order: 2;
+    padding: 48px 22px 28px;
+    min-height: 48vh;
+  }
+  .coming-copy {
+    margin: 0;
+  }
+  .coming-copy .eyebrow {
+    margin-bottom: 18px;
+  }
+  .coming-copy h1 {
+    font-size: clamp(54px, 18vw, 78px);
+    margin-bottom: 26px;
+  }
+  .coming-copy > p {
+    font-size: 10px;
+    margin-bottom: 34px;
+    max-width: 360px;
+  }
+  .coming-form {
+    max-width: none;
+  }
+  .coming-meta {
+    padding-top: 54px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .coming-footer {
+    padding: 22px;
+    min-height: 96px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+  .coming-footer nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
